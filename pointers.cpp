@@ -85,6 +85,7 @@ int main(int argc, char **argv)
     	}
     }
     int i;
+    printf("\n");
     double allGrades[student.n_assignments];
     for(i = 0; i < student.n_assignments; i++)
     {
@@ -128,9 +129,9 @@ int main(int argc, char **argv)
 
     // Call `CalculateStudentAverage(???, ???)`
     calculateStudentAverage(&student, allGrades);
-    printf("out function\n");
     // Output `average`
-    printf("Student: %s %s [%d]\n\tAverage grade: %f\n", student.f_name, student.l_name, student.id, student.grades[0]);
+    printf("\n");
+    printf("Student: %s %s [%d]\n\tAverage grade: %f\n", student.f_name, student.l_name, student.id, allGrades[0]);
     return 0;
 }
 
@@ -139,13 +140,9 @@ void calculateStudentAverage(void *object, double *avg)
     int i;
     double sum = 0;
     Student student = *(Student*)(object);
-    printf("in function\n");
     for(i = 0; i < student.n_assignments; i++)
     {
     	sum = sum + avg[i];
-    	printf("in loop: %f\n", sum);
     } 
-    printf("out loop\n");
-    printf("%f\n", (sum / ((Student*)object)->n_assignments));
-    student.grades[0] = (sum / ((Student*)object)->n_assignments);
+    avg[0] = (sum / ((Student*)object)->n_assignments);
 }
