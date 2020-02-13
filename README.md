@@ -13,7 +13,7 @@ Create a C++ program that will prompt the user for information about a student a
   
 The program should then calculate the average score of the assignments and print the results (rounding the average to 1 digit after the decimal place).
 
-## Compile and run
+## Compile and Run
 
 compile: g++ -std=c++11 -o pointers pointers.cpp
 
