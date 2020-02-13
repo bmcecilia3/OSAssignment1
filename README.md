@@ -16,4 +16,5 @@ The program should then calculate the average score of the assignments and print
 ## Compile and run
 
 compile: g++ -std=c++11 -o pointers pointers.cpp
+
 run: ./pointers < input.txt > output.txt
