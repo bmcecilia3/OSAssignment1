@@ -22,8 +22,10 @@ int main(int argc, char **argv)
 {
     Student student;
     int flag = 0;
-	student.f_name = (char *)malloc(sizeof(char) * 128);
-	student.l_name = (char *)malloc(sizeof(char) * 128);
+    char *first;
+    char *last;
+	first = (char *)malloc(sizeof(char) * 128);
+	last = (char *)malloc(sizeof(char) * 128);
     // Sequence of user input -> store in fields of `student`
     while(flag == 0)
     {
@@ -42,7 +44,7 @@ int main(int argc, char **argv)
     flag = 0;
     while(flag == 0)
     {
-    	char first[128];
+    	//char first[128];
     	printf("Please enter the student's first name: ");
     	std::cin >> first;
     	if(first == NULL)
@@ -57,7 +59,7 @@ int main(int argc, char **argv)
     flag = 0;
     while(flag == 0)
     {
-    	char last[128];
+    	//char last[128];
     	printf("Please enter the student's last name: ");
     	std::cin >> last;
     	if(last == NULL)
